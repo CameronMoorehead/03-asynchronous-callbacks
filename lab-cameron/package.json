@@ -1,0 +1,28 @@
+{
+  "name": "lab-cameron",
+  "version": "1.0.0",
+  "description": "Parallel file processing lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage || exit 0",
+    "lint": "eslint **/*.js || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CameronMoorehead/03-asynchronous-callbacks.git"
+  },
+  "keywords": [
+    "TDD",
+    "node"
+  ],
+  "author": "Cameron Moorehead",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CameronMoorehead/03-asynchronous-callbacks/issues"
+  },
+  "homepage": "https://github.com/CameronMoorehead/03-asynchronous-callbacks#readme",
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "jest": "^21.2.1"
+  }
+}
