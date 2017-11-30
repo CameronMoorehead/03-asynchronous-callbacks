@@ -9,13 +9,13 @@ const recursiveReader = (paths, callback) => {
       callback(null, result);
       return;
     }
-    readFile(paths[0], (error, data) => {
+    readFile(paths.shift(), (error, data) => {
       if (error) {
         callback(error);
         return;
       }
       result.push(data.toString('utf-8', 0, 5));
-      recursePaths(paths.shift());
+      recursePaths(paths);
     });
   };
   recursePaths(paths);
