@@ -7,17 +7,20 @@ const reader = (paths, callback) => {
 
   readFile(paths[0], (error, data) => {
     if (error) {
-      return callback(error);
+      callback(error);
+      return;
     }
     result.push(data.toString('utf-8', 0, 5));
     readFile(paths[1], (error, data) => {
       if (error) {
-        return callback(error);
+        callback(error);
+        return;
       }
       result.push(data.toString('utf-8', 0, 5));
       readFile(paths[2], (error, data) => {
         if (error) {
-          return callback(error);
+          callback(error);
+          return;
         }
         result.push(data.toString('utf-8', 0, 5));
         callback(null, result);
@@ -25,5 +28,6 @@ const reader = (paths, callback) => {
     });
   });
 };
+
 
 module.exports = reader;
